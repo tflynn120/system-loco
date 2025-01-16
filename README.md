@@ -1,3 +1,11 @@
+To run
+
+-npm run dev
+
+To test
+
+-npm run test
+
 If I had more time:
 
 - More tests, test each deviceDetails section individually (summary, status etc) as well as test the response of when the fetch call fails
