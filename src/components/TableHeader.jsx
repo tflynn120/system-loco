@@ -10,7 +10,7 @@ export default function TableHeader() {
     "View Details",
   ];
   return (
-    <thead>
+    <thead className="table-header">
       <tr>
         {headers.map((header) => (
           <th key={header}>{header}</th>

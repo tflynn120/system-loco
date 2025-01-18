@@ -20,7 +20,7 @@ export default function TableRow({ device }) {
 
       <td>
         <NavLink to={`/device-list/${device.id}`}>
-          <Button label="View details" />
+          <Button className="button-view-details" label="View details" />
         </NavLink>
       </td>
     </tr>

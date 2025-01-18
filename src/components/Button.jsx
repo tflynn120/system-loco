@@ -1,3 +1,10 @@
-export default function Button({ label, className }) {
-  return <button className={`${className} "button-main`}>{label}</button>;
+export default function Button({ label, className, disabled }) {
+  return (
+    <button
+      disabled={disabled ? disabled : false}
+      className={`${className ? className : ""} "button-main`}
+    >
+      {label}
+    </button>
+  );
 }

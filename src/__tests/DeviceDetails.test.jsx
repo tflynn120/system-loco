@@ -5,8 +5,37 @@ import "@testing-library/jest-dom";
 import React from "react";
 import { render, screen, waitFor } from "@testing-library/react";
 import { BrowserRouter as Router } from "react-router-dom";
-import DeviceDetails from "../layouts/DeviceDetails";
-import { DEVICE_DETAIL_ENDPOINT } from "../constants";
+import DeviceDetails from "../pages/DeviceDetails";
+
+jest.mock("../hooks/useFetchDeviceDetails", () => ({
+  __esModule: true,
+  default: jest.fn(() => ({
+    deviceDetails: {
+      id: "123",
+      name: "Test Device",
+      statusIndicators: {
+        battery: "normal",
+        moving: true,
+      },
+      model: {
+        name: "Model X",
+        family: "Family Y",
+        product: "Product Z",
+      },
+      owner: {
+        id: "owner123",
+        name: "Owner Name",
+      },
+      lastKnownLocation: {
+        lat: 12.34,
+        lon: 56.78,
+      },
+      lastReportTime: "2023-01-01T00:00:00Z",
+    },
+    loading: false,
+    error: null,
+  })),
+}));
 
 // Mock the fetch API
 window.fetch = jest.fn(() =>
