@@ -47,7 +47,7 @@ function App() {
           <Route path="/device-list/:deviceId" element={<DeviceDetails />} />
           <Route
             path="*"
-            element={<Navigate to="/not-found" replace={true} />}
+            element={<Navigate to="/device-list" replace={true} />}
           />
         </Routes>
       </LoaderProvider>
