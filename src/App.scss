@@ -136,6 +136,18 @@ h2 {
   width: 100%;
 }
 
+.input-button {
+  text-align: left;
+  display: block;
+  border-radius: 100px;
+  border: 1px solid #6f797a26;
+  font-size: $FONT_SIZE_SMALL;
+
+  @media screen and (max-width: 768px) {
+    margin-top: 10px;
+  }
+}
+
 button {
   padding: 0.6em 1.2em;
   font-size: 1em;
@@ -144,18 +156,6 @@ button {
   background-color: #f9f9f9;
   transition: border-color 0.25s;
   border: 1px solid rgba(111, 121, 122, 0.1490196078);
-
-  .input-button {
-    text-align: left;
-    display: block;
-    border-radius: 100px;
-    border: 1px solid #6f797a26;
-    font-size: $FONT_SIZE_SMALL;
-
-    @media screen and (max-width: 768px) {
-      margin-top: 10px;
-    }
-  }
 
   .back-button {
     display: block;
