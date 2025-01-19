@@ -23,11 +23,7 @@ export default function DeviceListInputs() {
         </Col>
 
         <Col xs={6} ms={2} md={3} lg={2}>
-          <Button
-            disabled
-            className="input-button"
-            label="Reset Filters"
-          ></Button>
+          <Button disabled className="secondary" label="Reset Filters"></Button>
         </Col>
       </Row>
     </Form>

@@ -14,7 +14,7 @@ export default function DeviceDetails() {
   return (
     <Container>
       <NavLink to="/device-list">
-        <Button label="Back to device list" className="button-main" />
+        <Button label="Back to device list" className="primary" />
       </NavLink>
       <h1>
         Device Details -{" "}

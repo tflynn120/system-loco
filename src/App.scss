@@ -8,7 +8,7 @@ $BORDER_COLOR: #dddddd;
 $FONT_SIZE_SMALL: 14px;
 $FONT_SIZE_MEDIUM: 18px;
 $MARGIN_BOTTOM: 20px;
-$PADDING: 20px;
+$PADDING_20: 20px;
 
 :root {
   font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
@@ -27,10 +27,11 @@ $PADDING: 20px;
 html {
   min-height: 100%;
 }
+
 a {
   font-weight: 500;
   color: #646cff;
-  text-decoration: inherit;
+  text-decoration: none;
 
   &:hover {
     color: #535bf2;
@@ -136,45 +137,30 @@ h2 {
   width: 100%;
 }
 
-.input-button {
-  text-align: left;
-  display: block;
-  border-radius: 100px;
-  border: 1px solid #6f797a26;
-  font-size: $FONT_SIZE_SMALL;
-
-  @media screen and (max-width: 768px) {
-    margin-top: 10px;
-  }
-}
-
 button {
-  padding: 0.6em 1.2em;
-  font-size: 1em;
+  padding: 8px 16px;
+  font-size: $FONT_SIZE_SMALL;
   font-weight: 500;
   font-family: "Roboto";
-  background-color: #f9f9f9;
+  background: #f1f1f1;
   transition: border-color 0.25s;
   border: 1px solid rgba(111, 121, 122, 0.1490196078);
+  border-radius: 4px;
 
-  .back-button {
+  .secondary {
+    text-align: left;
     display: block;
-    margin-bottom: 16px;
+    border-radius: 100px;
+    border: 1px solid #6f797a26;
+    font-size: $FONT_SIZE_SMALL;
+
+    @media screen and (max-width: 768px) {
+      margin-top: 10px;
+    }
   }
 
-  .button-main {
-    padding: 6px 12px;
-    border-radius: 4px;
-    background: #f1f1f1;
-  }
-
-  .button-view-details {
-    display: block;
-    margin: 0 auto;
-  }
-  .back-button {
-    display: block;
-    margin-bottom: 16px;
+  &:hover:not(:disabled) {
+    border: 1px solid $PRIMARY_BLACK;
   }
 }
 
@@ -222,7 +208,7 @@ table {
   margin: 0 auto;
   text-align: center;
   width: 100%;
-  padding: $PADDING;
+  padding: $PADDING_20;
 }
 
 .device-details {
@@ -270,6 +256,11 @@ table {
 
 .padding-0 {
   padding: 0;
+}
+
+.centered-block {
+  display: block;
+  margin: 0 auto;
 }
 
 .spinner-container {

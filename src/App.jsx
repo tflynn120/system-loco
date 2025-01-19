@@ -26,10 +26,10 @@ const DeviceListLayout = () => (
 const DeviceMapLayout = () => (
   <Container fluid>
     <Row>
-      <Col lg={2}>
+      <Col sm={12} md={12} lg={2} xl={2} className="padding-0">
         <Sidebar />
       </Col>
-      <Col lg={10}>
+      <Col sm={12} md={12} xl={10} lg={10}>
         <DeviceMap />
       </Col>
     </Row>
