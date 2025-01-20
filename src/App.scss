@@ -10,8 +10,14 @@ $FONT_SIZE_MEDIUM: 18px;
 $MARGIN_BOTTOM: 20px;
 $PADDING_20: 20px;
 
+@mixin font-roboto($size, $weight: 400) {
+  font-family: "Roboto", sans-serif;
+  font-size: $size;
+  font-weight: $weight;
+}
+
 :root {
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-family: "Roboto", Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
   line-height: 1.5;
   font-weight: 400;
   color-scheme: light dark;
@@ -40,7 +46,7 @@ a {
 
 body {
   display: block;
-  font-family: Roboto, sans-serif;
+  @include font-roboto(16px);
   width: 100%;
   margin: 0;
   padding: 0;
@@ -141,13 +147,17 @@ button {
   padding: 8px 16px;
   font-size: $FONT_SIZE_SMALL;
   font-weight: 500;
-  font-family: "Roboto";
+  @include font-roboto(16px);
   background: #f1f1f1;
   transition: border-color 0.25s;
   border: 1px solid rgba(111, 121, 122, 0.1490196078);
   border-radius: 4px;
 
-  .secondary {
+  &:hover:not(:disabled) {
+    border: 1px solid $PRIMARY_BLACK;
+  }
+
+  &.secondary {
     text-align: left;
     display: block;
     border-radius: 100px;
@@ -155,12 +165,9 @@ button {
     font-size: $FONT_SIZE_SMALL;
 
     @media screen and (max-width: 768px) {
+      left: 0;
       margin-top: 10px;
     }
-  }
-
-  &:hover:not(:disabled) {
-    border: 1px solid $PRIMARY_BLACK;
   }
 }
 
